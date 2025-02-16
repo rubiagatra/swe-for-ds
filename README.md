@@ -23,18 +23,18 @@ This project illustrates the following software engineering principles in the co
 
 ### Installation
 
-1.  **Install UV:** UV is used for managing project dependencies. Follow the instructions for your platform from the [UV repository](insert link to UV repo here).
+1.  **Install UV:** UV is used for managing project dependencies. Follow the instructions for your platform from the [UV](https://docs.astral.sh/uv/getting-started/installation/).
 
 2.  **Clone the repository:**
 
     ```bash
-    git clone [repository URL]
+    git clone git@github.com:rubiagatra/swe-for-ds.git
     ```
 
 3.  **Navigate to the project directory:**
 
     ```bash
-    cd [project directory]
+    cd swe-for-ds
     ```
 
 4.  **Install project dependencies using UV:**
@@ -50,6 +50,6 @@ This project illustrates the following software engineering principles in the co
 Explain how to run the different parts of the project. Provide specific commands and example usage for each module or script. For example:
 
 ```bash
-uv run python [module4].py  # Run module 1
-uv run pytest [module4]_test.py -v # Run unit tests for module 1 with verbose output
+uv run python [module4].py  # Run module 4
+uv run pytest [module4]_test.py -v # Run unit tests for module 4 with verbose output
 ```
