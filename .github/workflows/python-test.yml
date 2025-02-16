@@ -1,0 +1,31 @@
+name: Python Test
+
+on:
+  pull_request:
+    branches: [main] # Or your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Or other suitable runner
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x" # Or specify your Python version (e.g., 3.9)
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt # Or your preferred installation method (e.g., uv)
+
+      - name: Run pytest
+        run: |
+          pytest -v # Or add other pytest options as needed (e.g., --cov, -n auto)
+
+      - name: Upload coverage reports to Codecov (Optional)
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # Replace with your Codecov token
