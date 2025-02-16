@@ -8,4 +8,5 @@ dependencies = [
     "black>=25.1.0",
     "isort>=6.0.0",
     "numpy>=2.2.3",
+    "scipy>=1.15.1",
 ]
